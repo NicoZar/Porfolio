@@ -1,15 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root{
     --primaryColor: #0FCBD9;
     --primaryColor50: #0fc9d780;
     --grey: #282828;
     --darkgrey: #1C1C1C;
     --white: #EEEEEE;
     --black: #111111;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     text-decoration: none;
     font-family: "Playfair Display";
     font-weight: 400;
@@ -39,7 +43,6 @@
 
 .home{
     background-color: var(--primaryColor);
-    z-index: -10;
     position: relative;
     width: 100%;
 }
@@ -48,10 +51,10 @@
     position: absolute;
     width: 24.18%;
     height: 102%;
-    
+
     background: no-repeat center top url(./images/IMG_2420.PNG);
     background-size:cover;
-    
+
     top: -0.5%;
     left: calc(60% - 12.9%);
 }
@@ -170,7 +173,7 @@ p{
     font-size: 1em;
 }
 
-.about__text__button p{
+.about__text__button a{
     color: var(--grey);
     font-size: 1em;
 }
