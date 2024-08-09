@@ -2,6 +2,8 @@
 
 :root{
     --primaryColor: #0FCBD9;
+    /* --primaryColor: #D9A70F;
+    --primaryColor: #0FD9AB; */
     --primaryColor50: #0fc9d780;
     --grey: #282828;
     --darkgrey: #1C1C1C;
@@ -17,7 +19,7 @@
     text-decoration: none;
     font-family: "Playfair Display";
     font-weight: 400;
-    font-size: 16px;
+    font-size: 22px;
 }
 
 .playfair-display-font {
@@ -50,12 +52,12 @@
 .home__photo{
     position: absolute;
     width: 24.18%;
-    height: 102%;
+    height: 100%;
 
     background: no-repeat center top url(./images/IMG_2420.PNG);
     background-size:cover;
 
-    top: -0.5%;
+    top: 0;
     left: calc(60% - 12.9%);
 }
 
@@ -64,7 +66,6 @@
     width: 60%;
     height: 100%;
     padding: 100px 150px;
-    font-size: 1.4rem;
 
     display: flex;
     flex-direction: column;
@@ -74,18 +75,16 @@
 
 h1{
     color: var(--primaryColor);
-    font-size: 2.5em;
+    font-size: 2.5rem;
 }
 
 p{
     color: var(--white);
-    font-size: 1em;
 }
 
 .links,
 .links a{
     color: var(--primaryColor50);
-    font-size: 1em;
 }
 
 .home__text__button{
@@ -94,7 +93,10 @@ p{
     border: var(--primaryColor) 2px solid;
     box-shadow: 0 0 7px 0 var(--primaryColor50);
     border-radius: 12px;
-    font-size: 1em;
+}
+
+.home__text__button a{
+    color: var(--white);
 }
 
 /*---------------------  About  ---------------------*/
@@ -141,26 +143,23 @@ p{
 }
 
 .about__text{
-    width: 60%;
-    height: inherit;
-
-    padding: 100px 150px;
-    font-size: 1.4rem;
-
     display: flex;
     flex-direction: column;
-    gap: 20px;
     justify-content: center;
+
+    width: 60%;
+    height: inherit;
+    padding: 100px 150px;
+    gap: 20px;
 }
 
 .about__text h2{
     color: var(--primaryColor);
-    font-size: 2.1em;
+    font-size: 2.1rem;
 }
 
 .about__text p{
     color: var(--white);
-    font-size: 1em;
 }
 
 .about__text__button{
@@ -170,22 +169,146 @@ p{
     background-color: var(--primaryColor);
     box-shadow: 0 0 7px 0 var(--primaryColor50);
     border-radius: 12px;
-    font-size: 1em;
 }
 
 .about__text__button a{
     color: var(--grey);
-    font-size: 1em;
 }
 
 /*---------------------  Activity  ---------------------*/
 
 .activity{
-    background-color: var(--primaryColor);
+    background: url(./images/Background.png) center / cover ;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
 }
 
+.activity h2{
+    color: var(--primaryColor);
+    font-size: 2.1rem;
+    width: fit-content;
+    margin: auto;
+}
+
+.activity__items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 40px;
+    gap: 40px;
+}
+
+.activity__items__card{
+    width: 450px;
+    height: 150px;
+
+    display: flex;
+    border-radius: 40px;
+    background: #111111bf;
+}
+
+.activity__items__card__preview{
+    width: 35%;
+    border-radius: 30px;
+    margin: 10px;
+    background: url(./images/masOMenos.png) center / cover;
+    position: relative;
+}
+
+.activity__items__card__preview__language{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    background-color: var(--white);
+    border-radius: 0px 30px ;
+    width: fit-content;
+    height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.activity__items__card__text{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    width: 65%;
+    overflow-y: clip;
+    color: var(--white);
+}
+
+.activity__items__card__text__title{
+    /* text-decoration-line: underline; */
+}
+
+.activity__items__card__text__description{
+    width: fit-content;
+    font-size: 0.66rem;
+}
 /*---------------------  Contact  ---------------------*/
 
 .contact{
     background-color: var(--grey);
+}
+
+.contact__list{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    padding: 200px;
+}
+
+.contact__list h2{
+    color: var(--primaryColor);
+    font-size: 2.1rem;
+    margin: auto;
+    width: fit-content;
+}
+
+.contact__list hr{
+    border-color: var(--primaryColor);
+    margin: auto;
+    width: 50%;
+}
+
+.contact__list__primaryList, 
+.contact__list__secundaryList{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 50px;
+    margin: auto;
+    justify-content: center;
+    width: 50%;
+}
+
+.contact__list__secundaryList__email,
+.contact__list__secundaryList__phone,
+.contact__list__secundaryList__linkedin,
+.contact__list__secundaryList__github{
+    display: flex;
+    gap: 10px;
+
+    padding: 5px 10px;
+    border: var(--primaryColor) 2px solid;
+    box-shadow: 0 0 7px 0 var(--primaryColor50);
+    border-radius: 12px;
+}
+
+.contact__list__secundaryList__email img,
+.contact__list__secundaryList__phone img,
+.contact__list__secundaryList__linkedin img,
+.contact__list__secundaryList__github img{
+    width: 35px;
+}
+
+.contact__list__secundaryList__email a,
+.contact__list__secundaryList__phone a,
+.contact__list__secundaryList__linkedin a,
+.contact__list__secundaryList__github a{
+    width:fit-content;
+    font-size: 1,33rem;
+    color: var(--white);
 }
